@@ -113,12 +113,13 @@ public class HomePageTests {
             System.out.println("Wrong text");
         }
         waitSeconds(1);
+
         //Third Radio Button click
         driver.findElement(By.xpath(XPATH_RADIOBUTTONTHIRD)).click();
         waitSeconds(1);
         if(driver.findElement(By.xpath(XPATH_THIRDPAGETEXT)).getText().contains("Keyless Access")){
             System.out.println("Page contains same text");
-        }else{
+        } else {
             System.out.println("Wrong text");
         }
 
@@ -128,12 +129,13 @@ public class HomePageTests {
         waitSeconds(1);
         if(driver.findElement(By.xpath(XPATH_FOURTHPAGETEXT)).getText().contains("Mobile Check-out")){
             System.out.println("Page contains same text");
-        }else{
+        } else {
             System.out.println("Wrong text");
         }
 
         waitSeconds(1);
-        //Fivth Radio Button click
+
+        //Fifth Radio Button click
         driver.findElement(By.xpath(XPATH_RADIOBUTTONFIVTH)).click();
         waitSeconds(1);
         if(driver.findElement(By.xpath(XPATH_FIVTHPAGETEXT)).getText().contains("400+ SMARTHOTELS")){
@@ -144,12 +146,7 @@ public class HomePageTests {
 
         waitSeconds(1);
 
-
         //Clicking on Icons in fivth page
-
-
-
-
         driver.findElement(By.xpath(XPATH_FIRSTIMAGE)).click();
         waitSeconds(3);
 
@@ -160,7 +157,6 @@ public class HomePageTests {
         driver.switchTo().window((String) browserTabs[1]);
 
         waitSeconds(2);
-
 
         waitSeconds(1);
         WebElement message=driver.findElement(By.xpath("//*[@id=\"TOP\"]/div[5]/article/div[1]/div[2]/div/header/div[1]/h2/span[2]"));
